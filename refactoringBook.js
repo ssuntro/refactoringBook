@@ -5,7 +5,7 @@ function statement (invoice, plays) {
     const format = new Intl.NumberFormat("en-US", {style: "currency", currency: "USD", minimumFractionDigits: 2}).format
     for(let perf of invoice.performances) {
         //add volume credits
-        volumnCredits += Math.max(perf.audience - 30, 0)
+        volumeCredits += Math.max(perf.audience - 30, 0)
         //add extra credit for every ten comedy attendees
         if("comedy" === playFor(perf).type) volumeCredits += Math.floor(perf.audience / 5)
 
